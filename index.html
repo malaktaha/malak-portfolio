@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malak's Portfolio</title>
+    <style>
+        /* إعدادات عامة */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background: linear-gradient(135deg, #b5f09e, #c4d3ec);
+            color: white;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+            display: inline-block;
+        }
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        header img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 20px;
+            border: 3px solid white;
+        }
+
+        /* تحسين تنسيق البطاقة */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            width: 280px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            font-size: 22px;
+            color: #333;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .card .title {
+            font-weight: bold;
+        }
+
+        .card .details {
+            display: none;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #555;
+            text-align: left;
+        }
+
+        .card .details img {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        /* تصميم المتجاوب */
+        @media (max-width: 768px) {
+            .card-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .card {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+            header h1 {
+                font-size: 28px;
+            }
+            header p {
+                font-size: 16px;
+            }
+        }
+
+        /* قسم التواصل */
+.contact-section {
+    background-color: #c4f7ba;
+    color: rgb(12, 9, 9);
+    padding: 10px 0; /* تقليل الحشو */
+}
+
+.contact-section h2 {
+    font-size: 16px; /* تصغير حجم العنوان */
+    margin-bottom: 8px; /* تقليل المسافة أسفل العنوان */
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* تقليل الفجوة بين العناصر */
+    font-size: 12px; /* تقليل حجم الخط */
+    flex-direction: column;
+}
+
+.contact-info div {
+    display: flex;
+    align-items: center;
+    gap: 6px; /* تقليل المسافة بين الأيقونات والنص */
+}
+
+.contact-info p {
+    color: #051104;
+    font-size: 12px; /* تصغير حجم النص */
+    margin: 0; /* إزالة الفجوة من النصوص */
+}
+
+.contact-info i {
+    font-size: 16px; /* تصغير حجم الأيقونات */
+    color: #3498db;
+}
+
+
+     
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="file:///C:/Users/User/Desktop/MyWebsite/%D8%A7%D9%86%D8%A7.jpg" alt="Malak's Photo">
+        <h1>Malak Saeed Taha</h1>
+        <p>Software Developer | AI Enthusiast | Flutter & Web Developer</p>
+        <h7> press on the cards to show the cettificate </h7>
+    </header>
+
+    <section>
+        <div class="card-container">
+            <!-- البطاقة 1 -->
+            <div class="card" onclick="toggleDetails(this)">
+                <h3>Python - Udemy</h3>
+                <p><span class="title">Certificate in python Development</span></p>
+                <div class="details">
+                    <img src="file:///C:/Users/User/Desktop/cources%20online%20+%20CV/Python-certificate%20UDEMY.jpg" alt="AI Certificate">
+                    <p>learning basices of python and Intelligence development.</p>
+                </div>
+            </div>
+
+            <!-- البطاقة 2 -->
+            <div class="card" onclick="toggleDetails(this)">
+                <h3>Flutter Development Certificate</h3>
+                <p><span class="title">Certificate in Flutter Development</span></p>
+                <div class="details">
+                    <img src="file:///C:/Users/User/Desktop/cources%20online%20+%20CV/FLUTTER.jpg" alt="Flutter Certificate">
+                    <p>Completion of a comprehensive course on Flutter framework for mobile development.</p>
+                </div>
+            </div>
+
+            <!-- البطاقة 3 -->
+            <div class="card" onclick="toggleDetails(this)">
+                <h3>Python</h3>
+                <p><span class="title">Google </span></p>
+                <div class="details">
+                    <img src="file:///C:/Users/User/Desktop/cources%20online%20+%20CV/GOOGLE.jpg" alt="Web Certificate">
+                    <p>Crash course in python</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <!-- البطاقة 4 -->
+            <div class="card" onclick="toggleDetails(this)">
+                <h3>Data Science Certificate</h3>
+                <p><span class="title">Certificate in Data Science</span></p>
+                <div class="details">
+                    <img src="file:///C:/Users/User/Desktop/cources%20online%20+%20CV/Python%20-%20DataScience.jpg" alt="Data Science Certificate">
+                    <p>Focused on data analysis, machine learning, and data-driven decision-making.</p>
+                </div>
+            </div>
+
+            <!-- البطاقة 5 -->
+            <div class="card" onclick="toggleDetails(this)">
+                <h3>SQL</h3>
+                <p><span class="title">SQL</span></p>
+                <div class="details">
+                    <img src="file:///C:/Users/User/Desktop/cources%20online%20+%20CV/certificate%201%20SQL.jpg" alt="Cloud Computing Certificate">
+                    <p>Learned the fundamentals of cloud infrastructure and development tools.</p>
+                </div>
+            </div>
+            <!-- البطاقة 6 -->
+<div class="card" onclick="toggleDetails(this)">
+    <h3>Haifa univercity Certificate</h3>
+    <p><span class="title">Information Systems AI Specialization</span></p>
+    <div class="details">
+        <img src="file:///C:/Users/User/Desktop/cources%20online%20+%20CV/JS%20certificate.jpg" alt="JavaScript Certificate">
+    </div>
+</div>
+
+        </div>
+    </section>
+
+    <!-- قسم التواصل -->
+<div class="contact-section">
+    <h2 style="font-size: 20px; margin-bottom: 10px;">Contact Me</h2>
+    <div class="contact-info" style="font-size: 14px;">
+        <div style="margin-bottom: 5px;">
+            <i class="fa fa-envelope" style="font-size: 16px; color: #9aec9a;"></i>
+            <p style="display: inline-block; margin-left: 10px;">Email: malaktaha@gmail.com</p>
+        </div>
+        <div style="margin-bottom: 5px;">
+            <i class="fa fa-phone" style="font-size: 16px; color: #c3e69c;"></i>
+            <p style="display: inline-block; margin-left: 10px;">Phone: 05489XXXXX</p>
+        </div>
+        <div style="margin-bottom: 5px;">
+            <i class="fa fa-linkedin" style="font-size: 16px; color: #c3e69c;"></i>
+            <p style="display: inline-block; margin-left: 10px;">LinkedIn: www.linkedin.com/in/malak-taha-959447252</p>
+        </div>
+    </div>
+</div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("الموقع جاهز!");
+        });
+
+        function toggleDetails(card) {
+            var details = card.querySelector('.details');
+            details.style.display = (details.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+
+</body>
+</html>
